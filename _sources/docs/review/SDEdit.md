@@ -1,12 +1,15 @@
+```{admonition} Information
+- **Title:** SDEdit: Guided Image Synthesis and Editing with Stochastic Differential Equations
+
+- **Reference**
+    - Paper: [https://arxiv.org/pdf/2108.01073.pdf](https://arxiv.org/pdf/2108.01073.pdf)
+
+- **Author:** Seunghwan Ji
+
+- **Last updated on Oct. 03, 2023**
+```
+
 # SDEdit
-
-## 학습 자료
-
-**SDEdit: Guided Image Synthesis and Editing with Stochastic Differential Equations**
-
-[https://arxiv.org/pdf/2108.01073.pdf](https://arxiv.org/pdf/2108.01073.pdf)
-
----
 
 ## Abstract
 
@@ -40,8 +43,8 @@
 ## 2. Related Works
 
 ### 2.1. Score Based Generated Model
-:::{figure-md} markdown-fig
-<img src="../../pics/SDEdit/img0.png" alt="SDEdit_00" class="bg-primary mb-1" width="350px">
+:::{figure-md} 
+<img src="../../pics/SDEdit/img0.png" alt="SDEdit_00" class="bg-primary mb-1" width="700px">
 
 Image 1
 :::
@@ -51,8 +54,8 @@ Image 1
 - 이 때, score는 확률 밀도 함수의 순간 기울기(미분값)로 정의한다.
 
 ### 2.2. Score Based Generated Diffusion Model (SDE, SMLD)
-:::{figure-md} markdown-fig
-<img src="../../pics/SDEdit/img1.png" alt="SDEdit_01" class="bg-primary mb-1" width="350px">
+:::{figure-md} 
+<img src="../../pics/SDEdit/img1.png" alt="SDEdit_01" class="bg-primary mb-1" width="700px">
 
 Image 2
 :::
@@ -67,8 +70,9 @@ Image 2
 
 1. Pre-Setup
     - Guide image의 Level을 정의한다.
-        :::{figure-md} markdown-fig
-        <img src="../../pics/SDEdit/img2.png" alt="SDEdit_02" class="bg-primary mb-1" width="350px">
+        :::{figure-md} 
+        <img src="../../pics/SDEdit/img2.png" alt="SDEdit_02" class="bg-primary mb-1" width="700px">
+        
         Image 3
         :::
         
@@ -79,8 +83,9 @@ Image 2
     - DDPM과 달리 SDE의 경우, 완전히 noise화된 이미지 즉, random noise로부터 denoising을 진행할 필요가 없다.
     - 즉, 적절한 $t_{0} \in [0,1]$를 지정한 후 denoising process가 가능하다.
         
-        :::{figure-md} markdown-fig
-        <img src="../../pics/SDEdit/img3.png" alt="SDEdit_03" class="bg-primary mb-1" width="350px">
+        :::{figure-md} 
+        <img src="../../pics/SDEdit/img3.png" alt="SDEdit_03" class="bg-primary mb-1" width="700px">
+        
         Image 4
         :::
     - 이 때, 적절한 $t_{0}$를 정의해야하는데,
@@ -89,14 +94,16 @@ Image 2
         
         를 얻게된다.
         
-        :::{figure-md} markdown-fig
-        <img src="../../pics/SDEdit/img4.png" alt="SDEdit_04" class="bg-primary mb-1" width="350px">
+        :::{figure-md} 
+        <img src="../../pics/SDEdit/img4.png" alt="SDEdit_04" class="bg-primary mb-1" width="700px">
+        
         Image 5
         :::
     - 아래는 SDEdit의 적용 과정이다.
         
-        :::{figure-md} markdown-fig
-        <img src="../../pics/SDEdit/img5.png" alt="SDEdit_05" class="bg-primary mb-1" width="350px">
+        :::{figure-md} 
+        <img src="../../pics/SDEdit/img5.png" alt="SDEdit_05" class="bg-primary mb-1" width="700px">
+        
         Image 6
         :::
 
@@ -108,27 +115,31 @@ Image 2
         - faithful : $L_{2}$ score (lower is better)
         - 그 외 종합적인 평가 지표로 survey를 통한 수치를 제시하였다.
             
-            :::{figure-md} markdown-fig
-            <img src="../../pics/SDEdit/img6.png" alt="SDEdit_06" class="bg-primary mb-1" width="350px">
+            :::{figure-md} 
+            <img src="../../pics/SDEdit/img6.png" alt="SDEdit_06" class="bg-primary mb-1" width="700px">
+            
             Image 7
             :::
     - 기존의 GAN 방식들과 비교했을 때 Kid, $L_{2}$ score 모두 더 좋은 수치를 보이는 것을 확인할 수 있다.
 - Comparison with GAN (styleGAN-ADA + Inversion)
     
-    :::{figure-md} markdown-fig
-    <img src="../../pics/SDEdit/img7.png" alt="SDEdit_07" class="bg-primary mb-1" width="350px">
+    :::{figure-md} 
+    <img src="../../pics/SDEdit/img7.png" alt="SDEdit_07" class="bg-primary mb-1" width="700px">
+    
     Image 8
     :::
     - SDEdit이 GAN Based model보다 더 자연스럽고(realistic), 유저의 guide를 잘 따르는(faithful)것을 확인할 수 있다.
 - Comparison with original blending technique
     
-    :::{figure-md} markdown-fig
-    <img src="../../pics/SDEdit/img8.png" alt="SDEdit_08" class="bg-primary mb-1" width="350px">
+    :::{figure-md} 
+    <img src="../../pics/SDEdit/img8.png" alt="SDEdit_08" class="bg-primary mb-1" width="700px">
+    
     Image 9
     :::
 
-    :::{figure-md} markdown-fig
-    <img src="../../pics/SDEdit/img9.png" alt="SDEdit_09" class="bg-primary mb-1" width="350px">
+    :::{figure-md} 
+    <img src="../../pics/SDEdit/img9.png" alt="SDEdit_09" class="bg-primary mb-1" width="700px">
+    
     Image 10
     :::
     - 기존의 전통적인 방식의 몇가지 blending 기법과 비교해도 더 좋은 성능과 수치를 보이는 것을 확인할 수 있다.
