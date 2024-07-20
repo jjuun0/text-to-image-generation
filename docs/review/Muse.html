@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/PseudoLab_logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Make A Video" href="Make_A_Video.html" />
+    <link rel="next" title="Scaling up GANs for Text-to-Image Synthesis" href="GIGAGAN.html" />
     <link rel="prev" title="Diffusion Models already have a Semantic Latent Space" href="Diffusion_models_already_have_a_Semantic_Latent_Space.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -166,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    [PseudoLab] Text-to-Image Generation (feat. Diffusion)
+                    Welcome to PseudoDiffusers!!
                 </a>
             </li>
         </ul>
@@ -239,14 +239,40 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Muse</a></li>
 
 
+<li class="toctree-l1"><a class="reference internal" href="GIGAGAN.html">Scaling up GANs for Text-to-Image Synthesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consistency_models.html">Consistency Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latent_consistency_models.html">Latent Consistency Models</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="LLM_grounded_Diffusion.html">LLM Grounded Diffusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DiT.html">Abstract</a></li>
+
+
+
+
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Video Generation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Make_A_Video.html">Make A Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="VideoLDM.html">VideoLDM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AnimateDiff.html">AnimateDiff</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Animate_Anyone.html">Animate Anyone</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DreaMoving.html">DreaMoving</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DreamPose.html">DreamPose: Fashion Image-to-Video Synthesis via Stable Diffusion</a></li>
+
+
+
+
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">3D Generation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="NeRF.html">NeRF : Representing Scenes as Neural Radiance Fields for View Synthesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3DGS.html">3D Gaussian Splatting for Real-Time Radiance Field Rendering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DreamFusion.html"><strong>DreamFusion</strong></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiments</span></p>
 <ul class="nav bd-sidenav">
@@ -446,17 +472,17 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Muse</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#masked-modeling">Masked modeling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#masked-modeling">1. Masked modeling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-architecture">2. Model Architecture</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-trained-text-encoders">2.1. Pre-trained Text Encoders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semantic-tokenization-using-vqgan">2.2. Semantic Tokenization using VQGAN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-model">2.3. Base Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#super-resolution-model">2.4. Super-Resolution Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decoder-finetuning">2.5. Decoder Finetuning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classifier-free-guidance">2.7. Classifier Free Guidance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterative-parallel-decoding-at-inference">2.8. Iterative Parallel Decoding at Inference</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#architecture">Architecture</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-trained-text-encoders">2.1 Pre-trained Text Encoders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semantic-tokenization-using-vqgan">2.2. Semantic Tokenization using VQGAN</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-model">2.3. Base Model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#super-resolution-model">2.4. Super-Resolution Model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decoder-finetuning">2.5. Decoder Finetuning</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classifier-free-guidance">2.7. Classifier Free Guidance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterative-parallel-decoding-at-inference">2.8. Iterative Parallel Decoding at Inference</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">3. Results</a></li>
 </ul>
 </li>
@@ -490,10 +516,10 @@ document.write(`
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="muse">
 <h1>Muse<a class="headerlink" href="#muse" title="Permalink to this heading">#</a></h1>
-<figure class="align-default" id="figure-1">
+<figure class="align-default" id="id1">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/fig_1.png"><img alt="fig_1" class="bg-primary mb-1" src="../../_images/fig_1.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 421 </span><span class="caption-text">Figure 1</span><a class="headerlink" href="#figure-1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 426 </span><span class="caption-text">Figure 1</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -514,7 +540,7 @@ document.write(`
 </li>
 </ul>
 <section id="masked-modeling">
-<h2>Masked modeling<a class="headerlink" href="#masked-modeling" title="Permalink to this heading">#</a></h2>
+<h2>1. Masked modeling<a class="headerlink" href="#masked-modeling" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>[22.02] MaskGIT: Masked Generative Image Transformer</p>
 <ul>
@@ -522,16 +548,16 @@ document.write(`
 </ul>
 </li>
 </ul>
-<figure class="align-default" id="maskgit-1">
+<figure class="align-default" id="id2">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/maskgit_1.png"><img alt="fig_1" class="bg-primary mb-1" src="../../_images/maskgit_1.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 422 </span><span class="caption-text">maskgit 1</span><a class="headerlink" href="#maskgit-1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 427 </span><span class="caption-text">maskgit 1</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="maskgit-2">
+<figure class="align-default" id="id3">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/maskgit_2.png"><img alt="fig_1" class="bg-primary mb-1" src="../../_images/maskgit_2.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 423 </span><span class="caption-text">maskgit 2</span><a class="headerlink" href="#maskgit-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 428 </span><span class="caption-text">maskgit 2</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -543,13 +569,12 @@ document.write(`
 </li>
 </ul>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="architecture">
-<h1>Architecture<a class="headerlink" href="#architecture" title="Permalink to this heading">#</a></h1>
-<figure class="align-default" id="figure-3">
+<section id="model-architecture">
+<h2>2. Model Architecture<a class="headerlink" href="#model-architecture" title="Permalink to this heading">#</a></h2>
+<figure class="align-default" id="id4">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/fig_3.png"><img alt="fig_1" class="bg-primary mb-1" src="../../_images/fig_3.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 424 </span><span class="caption-text">Figure 3</span><a class="headerlink" href="#figure-3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 429 </span><span class="caption-text">Figure 3</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple">
@@ -577,7 +602,7 @@ document.write(`
 </li>
 </ol>
 <section id="pre-trained-text-encoders">
-<h2>2.1 Pre-trained Text Encoders<a class="headerlink" href="#pre-trained-text-encoders" title="Permalink to this heading">#</a></h2>
+<h3>2.1. Pre-trained Text Encoders<a class="headerlink" href="#pre-trained-text-encoders" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://arxiv.org/abs/2205.11487">Imagen</a> 에서 pretrained LLM 사용하면 효과적인 high-quality 의 이미지 생성 가능</p></li>
 <li><p><strong>풍부한 visual, semantic 정보를 추출</strong>할 수 있는 T5-XXL 사용</p>
@@ -599,7 +624,7 @@ document.write(`
 </ul>
 </section>
 <section id="semantic-tokenization-using-vqgan">
-<h2>2.2. Semantic Tokenization using VQGAN<a class="headerlink" href="#semantic-tokenization-using-vqgan" title="Permalink to this heading">#</a></h2>
+<h3>2.2. Semantic Tokenization using VQGAN<a class="headerlink" href="#semantic-tokenization-using-vqgan" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>VQGAN</p>
 <ul>
@@ -617,7 +642,7 @@ document.write(`
 </ul>
 </section>
 <section id="base-model">
-<h2>2.3. Base Model<a class="headerlink" href="#base-model" title="Permalink to this heading">#</a></h2>
+<h3>2.3. Base Model<a class="headerlink" href="#base-model" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>base model</p>
 <ul>
@@ -640,11 +665,11 @@ document.write(`
 </ul>
 </section>
 <section id="super-resolution-model">
-<h2>2.4. Super-Resolution Model<a class="headerlink" href="#super-resolution-model" title="Permalink to this heading">#</a></h2>
-<figure class="align-default" id="figure-4">
+<h3>2.4. Super-Resolution Model<a class="headerlink" href="#super-resolution-model" title="Permalink to this heading">#</a></h3>
+<figure class="align-default" id="id5">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/fig_4.png"><img alt="fig_1" class="bg-primary mb-1" src="../../_images/fig_4.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 425 </span><span class="caption-text">Figure 4</span><a class="headerlink" href="#figure-4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 430 </span><span class="caption-text">Figure 4</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ul>
@@ -655,17 +680,17 @@ document.write(`
 </ul>
 </li>
 <li><p>Architecture</p>
-<figure class="align-default" id="table-6">
+<figure class="align-default" id="id6">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/table_6.png"><img alt="fig_1" class="bg-primary mb-1" src="../../_images/table_6.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 426 </span><span class="caption-text">Table 6</span><a class="headerlink" href="#table-6" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 431 </span><span class="caption-text">Table 6</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </li>
 </ul>
 </section>
 <section id="decoder-finetuning">
-<h2>2.5. Decoder Finetuning<a class="headerlink" href="#decoder-finetuning" title="Permalink to this heading">#</a></h2>
+<h3>2.5. Decoder Finetuning<a class="headerlink" href="#decoder-finetuning" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>디테일을 높이기 위해 residual layer를 더 추가하고 channel 늘림</p>
 <ul>
@@ -674,10 +699,10 @@ document.write(`
 </li>
 <li><p>encoder weight, codebook, base, super-res transformer 모델은 freezing</p></li>
 </ul>
-<figure class="align-default" id="figure-13">
+<figure class="align-default" id="id7">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/fig_13.png"><img alt="fig_1" class="bg-primary mb-1" src="../../_images/fig_13.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 427 </span><span class="caption-text">Figure 13</span><a class="headerlink" href="#figure-13" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 432 </span><span class="caption-text">Figure 13</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -685,7 +710,7 @@ document.write(`
 </ul>
 </section>
 <section id="classifier-free-guidance">
-<h2>2.7. Classifier Free Guidance<a class="headerlink" href="#classifier-free-guidance" title="Permalink to this heading">#</a></h2>
+<h3>2.7. Classifier Free Guidance<a class="headerlink" href="#classifier-free-guidance" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>이미지 생성 퀄리티와 text-image alignment 향상을 위해 도입</p></li>
 <li><p>학습 때, 랜덤하게 10% 만 text conditioning 을 제거</p>
@@ -708,7 +733,7 @@ document.write(`
 </ul>
 </section>
 <section id="iterative-parallel-decoding-at-inference">
-<h2>2.8. Iterative Parallel Decoding at Inference<a class="headerlink" href="#iterative-parallel-decoding-at-inference" title="Permalink to this heading">#</a></h2>
+<h3>2.8. Iterative Parallel Decoding at Inference<a class="headerlink" href="#iterative-parallel-decoding-at-inference" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Muse 의 시간 효율성</p>
 <ul>
@@ -733,12 +758,13 @@ document.write(`
 </ul>
 </li>
 </ul>
-<figure class="align-default" id="figure-5">
+<figure class="align-default" id="id8">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/fig_5.png"><img alt="fig_1" class="bg-primary mb-1" src="../../_images/fig_5.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 428 </span><span class="caption-text">Figure 5</span><a class="headerlink" href="#figure-5" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 433 </span><span class="caption-text">Figure 5</span><a class="headerlink" href="#id8" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+</section>
 </section>
 <section id="results">
 <h2>3. Results<a class="headerlink" href="#results" title="Permalink to this heading">#</a></h2>
@@ -753,41 +779,41 @@ document.write(`
 <li><p>batch size: 512 on 512-core TPU-v4 chips</p></li>
 <li><p>Adafactor optimizer</p></li>
 </ul>
-<figure class="align-default" id="figure-6">
+<figure class="align-default" id="id9">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/fig_6.png"><img alt="fig_1" class="bg-primary mb-1" src="../../_images/fig_6.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 429 </span><span class="caption-text">Figure 6</span><a class="headerlink" href="#figure-6" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 434 </span><span class="caption-text">Figure 6</span><a class="headerlink" href="#id9" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
 <li><p>cardinality: 동일한 객체를 여러 번 생성할 때, Muse 는 크기, 색상, 회전된 모습</p></li>
 </ul>
-<figure class="align-default" id="figure-7">
+<figure class="align-default" id="id10">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/fig_7.png"><img alt="fig_1" class="bg-primary mb-1" src="../../_images/fig_7.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 430 </span><span class="caption-text">Figure 7</span><a class="headerlink" href="#figure-7" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 435 </span><span class="caption-text">Figure 7</span><a class="headerlink" href="#id10" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
 <li><p>정량적 평가</p></li>
 </ul>
-<p>:::{figure-md} Table 6
+<p>:::{figure-md}
 <img title="" src="../../pics/Muse/table_6.png" alt="fig_1" class="bg-primary mb-1" width="600">        Table 6
         :::</p>
 <ul>
 <li><p>FID(diversity) ↔ CLIP score(image-text alignment)</p>
-<figure class="align-default" id="figure-8">
+<figure class="align-default" id="id11">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/fig_8.png"><img alt="fig_1" class="bg-primary mb-1" src="../../_images/fig_8.png" style="width: 317px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 431 </span><span class="caption-text">Figure 8</span><a class="headerlink" href="#figure-8" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 436 </span><span class="caption-text">Figure 8</span><a class="headerlink" href="#id11" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </li>
 <li><p>inpainting, outpainting</p>
-<figure class="align-default" id="figure-10">
+<figure class="align-default" id="id12">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/fig_10.png"><img alt="fig_1" class="bg-primary mb-1" src="../../_images/fig_10.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 432 </span><span class="caption-text">Figure 10</span><a class="headerlink" href="#figure-10" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 437 </span><span class="caption-text">Figure 10</span><a class="headerlink" href="#id12" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </li>
@@ -877,11 +903,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="Make_A_Video.html"
+       href="GIGAGAN.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Make A Video</p>
+        <p class="prev-next-title">Scaling up GANs for Text-to-Image Synthesis</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -901,17 +927,17 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Muse</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#masked-modeling">Masked modeling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#masked-modeling">1. Masked modeling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-architecture">2. Model Architecture</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-trained-text-encoders">2.1. Pre-trained Text Encoders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semantic-tokenization-using-vqgan">2.2. Semantic Tokenization using VQGAN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-model">2.3. Base Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#super-resolution-model">2.4. Super-Resolution Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decoder-finetuning">2.5. Decoder Finetuning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classifier-free-guidance">2.7. Classifier Free Guidance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterative-parallel-decoding-at-inference">2.8. Iterative Parallel Decoding at Inference</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#architecture">Architecture</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-trained-text-encoders">2.1 Pre-trained Text Encoders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semantic-tokenization-using-vqgan">2.2. Semantic Tokenization using VQGAN</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-model">2.3. Base Model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#super-resolution-model">2.4. Super-Resolution Model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decoder-finetuning">2.5. Decoder Finetuning</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classifier-free-guidance">2.7. Classifier Free Guidance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterative-parallel-decoding-at-inference">2.8. Iterative Parallel Decoding at Inference</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">3. Results</a></li>
 </ul>
 </li>

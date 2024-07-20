@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/PseudoLab_logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Synthetic Data with Stable Diffusion for Foliar Disease Classification" href="../experiments/js_exp.html" />
+    <link rel="next" title="DreamPose: Fashion Image-to-Video Synthesis via Stable Diffusion" href="DreamPose.html" />
     <link rel="prev" title="Animate Anyone" href="Animate_Anyone.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -166,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    [PseudoLab] Text-to-Image Generation (feat. Diffusion)
+                    Welcome to PseudoDiffusers!!
                 </a>
             </li>
         </ul>
@@ -239,14 +239,40 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Muse.html">Muse</a></li>
 
 
+<li class="toctree-l1"><a class="reference internal" href="GIGAGAN.html">Scaling up GANs for Text-to-Image Synthesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consistency_models.html">Consistency Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latent_consistency_models.html">Latent Consistency Models</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="LLM_grounded_Diffusion.html">LLM Grounded Diffusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DiT.html">Abstract</a></li>
+
+
+
+
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Video Generation</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Make_A_Video.html">Make A Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="VideoLDM.html">VideoLDM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AnimateDiff.html">AnimateDiff</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Animate_Anyone.html">Animate Anyone</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">DreaMoving</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DreamPose.html">DreamPose: Fashion Image-to-Video Synthesis via Stable Diffusion</a></li>
+
+
+
+
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">3D Generation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="NeRF.html">NeRF : Representing Scenes as Neural Radiance Fields for View Synthesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3DGS.html">3D Gaussian Splatting for Real-Time Radiance Field Rendering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DreamFusion.html"><strong>DreamFusion</strong></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiments</span></p>
 <ul class="nav bd-sidenav">
@@ -509,7 +535,7 @@ document.write(`
 <figure class="align-default" id="id1">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/figure_1.png"><img alt="figure_1" class="bg-primary mb-1" src="../../_images/figure_1.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 469 </span><span class="caption-text">Figure 1. The overview of DreaMoving</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 567 </span><span class="caption-text">Figure 1. The overview of DreaMoving</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -555,7 +581,7 @@ document.write(`
 <figure class="align-default" id="id2">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/eq_11.png"><img alt="eq_1" class="bg-primary mb-1" src="../../_images/eq_11.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 470 </span><span class="caption-text">Equation 1 Content Guider cross attentino output given query, text, face, cloth features</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 568 </span><span class="caption-text">Equation 1 Content Guider cross attentino output given query, text, face, cloth features</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -619,25 +645,25 @@ document.write(`
 <figure class="align-default" id="id3">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/figure_21.png"><img alt="figure_2" class="bg-primary mb-1" src="../../_images/figure_21.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 471 </span><span class="caption-text">Figure 2. The results of DreaMoving with text prompt as input</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 569 </span><span class="caption-text">Figure 2. The results of DreaMoving with text prompt as input</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id4">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/figure_31.png"><img alt="figure_3" class="bg-primary mb-1" src="../../_images/figure_31.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 472 </span><span class="caption-text">Figure 3. The results of DreaMoving with text prompt and face image as inputs</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 570 </span><span class="caption-text">Figure 3. The results of DreaMoving with text prompt and face image as inputs</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id5">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/figure_41.png"><img alt="figure_4" class="bg-primary mb-1" src="../../_images/figure_41.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 473 </span><span class="caption-text">Figure 4. The results of DreaMoving with face and cloth images as inputs</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 571 </span><span class="caption-text">Figure 4. The results of DreaMoving with face and cloth images as inputs</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id6">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/figure_52.png"><img alt="figure_5" class="bg-primary mb-1" src="../../_images/figure_52.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 474 </span><span class="caption-text">Figure 5. The results of DreaMoving with stylized image as input</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 572 </span><span class="caption-text">Figure 5. The results of DreaMoving with stylized image as input</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -684,11 +710,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="../experiments/js_exp.html"
+       href="DreamPose.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Synthetic Data with Stable Diffusion for Foliar Disease Classification</p>
+        <p class="prev-next-title">DreamPose: Fashion Image-to-Video Synthesis via Stable Diffusion</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

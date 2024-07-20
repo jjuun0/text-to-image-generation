@@ -166,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    [PseudoLab] Text-to-Image Generation (feat. Diffusion)
+                    Welcome to PseudoDiffusers!!
                 </a>
             </li>
         </ul>
@@ -239,14 +239,40 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Muse.html">Muse</a></li>
 
 
+<li class="toctree-l1"><a class="reference internal" href="GIGAGAN.html">Scaling up GANs for Text-to-Image Synthesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consistency_models.html">Consistency Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latent_consistency_models.html">Latent Consistency Models</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="LLM_grounded_Diffusion.html">LLM Grounded Diffusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DiT.html">Abstract</a></li>
+
+
+
+
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Video Generation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Make_A_Video.html">Make A Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="VideoLDM.html">VideoLDM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AnimateDiff.html">AnimateDiff</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Animate_Anyone.html">Animate Anyone</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DreaMoving.html">DreaMoving</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DreamPose.html">DreamPose: Fashion Image-to-Video Synthesis via Stable Diffusion</a></li>
+
+
+
+
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">3D Generation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="NeRF.html">NeRF : Representing Scenes as Neural Radiance Fields for View Synthesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3DGS.html">3D Gaussian Splatting for Real-Time Radiance Field Rendering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DreamFusion.html"><strong>DreamFusion</strong></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiments</span></p>
 <ul class="nav bd-sidenav">
@@ -505,13 +531,13 @@ document.write(`
 <figure class="align-default" id="id1">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/glide1.png"><img alt="GLIDE_1" class="bg-primary mb-1" src="../../_images/glide1.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 293 </span><span class="caption-text">GLIDE text to image</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 298 </span><span class="caption-text">GLIDE text to image</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id2">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/glide2.png"><img alt="GLIDE_1" class="bg-primary mb-1" src="../../_images/glide2.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 294 </span><span class="caption-text">GLIDE image impainting</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 299 </span><span class="caption-text">GLIDE image impainting</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -538,7 +564,7 @@ p_{\theta}(x_{t-1}|x_t) := \mathcal{N}(\mu_{\theta}(x_t), \sum_{\theta}(x_t))
 <figure class="align-default" id="id3">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/glide5.png"><img alt="GLIDE_1" class="bg-primary mb-1" src="../../_images/glide5.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 295 </span><span class="caption-text">Proof of proportional relationship to finding score and epsilon</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 300 </span><span class="caption-text">Proof of proportional relationship to finding score and epsilon</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -552,13 +578,13 @@ p_{\theta}(x_{t-1}|x_t) := \mathcal{N}(\mu_{\theta}(x_t), \sum_{\theta}(x_t))
 <figure class="align-default" id="id4">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/glide6.png"><img alt="GLIDE_1" class="bg-primary mb-1" src="../../_images/glide6.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 296 </span><span class="caption-text">Classifier guidance</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 301 </span><span class="caption-text">Classifier guidance</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id5">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/glide10.png"><img alt="GLIDE_1" class="bg-primary mb-1" src="../../_images/glide10.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 297 </span><span class="caption-text">Classifier guidance</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 302 </span><span class="caption-text">Classifier guidance</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -568,7 +594,7 @@ p_{\theta}(x_{t-1}|x_t) := \mathcal{N}(\mu_{\theta}(x_t), \sum_{\theta}(x_t))
 <figure class="align-default" id="id6">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/glide7.png"><img alt="GLIDE_1" class="bg-primary mb-1" src="../../_images/glide7.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 298 </span><span class="caption-text">Classifier-free guidance</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 303 </span><span class="caption-text">Classifier-free guidance</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -578,13 +604,13 @@ p_{\theta}(x_{t-1}|x_t) := \mathcal{N}(\mu_{\theta}(x_t), \sum_{\theta}(x_t))
 <figure class="align-default" id="id7">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/glide8.png"><img alt="GLIDE_1" class="bg-primary mb-1" src="../../_images/glide8.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 299 </span><span class="caption-text">CLIP</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 304 </span><span class="caption-text">CLIP</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id8">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/glide9.png"><img alt="GLIDE_1" class="bg-primary mb-1" src="../../_images/glide9.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 300 </span><span class="caption-text">CLIP guidance</span><a class="headerlink" href="#id8" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 305 </span><span class="caption-text">CLIP guidance</span><a class="headerlink" href="#id8" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -612,7 +638,7 @@ p_{\theta}(x_{t-1}|x_t) := \mathcal{N}(\mu_{\theta}(x_t), \sum_{\theta}(x_t))
 <figure class="align-default" id="id9">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/glide14.png"><img alt="GLIDE_1" class="bg-primary mb-1" src="../../_images/glide14.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 301 </span><span class="caption-text">comparison between CLIP guidance and classifier-free guidance</span><a class="headerlink" href="#id9" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 306 </span><span class="caption-text">comparison between CLIP guidance and classifier-free guidance</span><a class="headerlink" href="#id9" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -622,7 +648,7 @@ p_{\theta}(x_{t-1}|x_t) := \mathcal{N}(\mu_{\theta}(x_t), \sum_{\theta}(x_t))
 <figure class="align-default" id="id10">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/glide12.png"><img alt="GLIDE_1" class="bg-primary mb-1" src="../../_images/glide12.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 302 </span><span class="caption-text">Quantitive Results</span><a class="headerlink" href="#id10" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 307 </span><span class="caption-text">Quantitive Results</span><a class="headerlink" href="#id10" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>논문에서는 classifier-free guidance와 CLIP guidance에 대해 Precision과 Recall, FID와 IS, CLIP score와 FID 간의 명확한 trade-off 를 관찰하고 있다고 언급한다.</p>
@@ -630,7 +656,7 @@ p_{\theta}(x_{t-1}|x_t) := \mathcal{N}(\mu_{\theta}(x_t), \sum_{\theta}(x_t))
 <figure class="align-default" id="id11">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/glide13.png"><img alt="GLIDE_1" class="bg-primary mb-1" src="../../_images/glide13.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 303 </span><span class="caption-text">Zero-shot FID results</span><a class="headerlink" href="#id11" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 308 </span><span class="caption-text">Zero-shot FID results</span><a class="headerlink" href="#id11" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Table1은 Unguided, CLIP guidance, Classifier-free guidance 기법을 각각 적용한 256x256 resolution image에 대해 human evaluation을 진행한 결과이다. Classifier-free guidance를 적용한 결과가 photorealism, caption 항목에 대해 압도적인 결과를 보임을 알 수 있다.</p>
@@ -638,7 +664,7 @@ p_{\theta}(x_{t-1}|x_t) := \mathcal{N}(\mu_{\theta}(x_t), \sum_{\theta}(x_t))
 <figure class="align-default" id="id12">
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/glide15.png"><img alt="GLIDE_1" class="bg-primary mb-1" src="../../_images/glide15.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 304 </span><span class="caption-text">final results</span><a class="headerlink" href="#id12" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 309 </span><span class="caption-text">final results</span><a class="headerlink" href="#id12" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>

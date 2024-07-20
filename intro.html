@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>[PseudoLab] Text-to-Image Generation (feat. Diffusion) &#8212; Text-to-Image Generation-feat-Diffusion</title>
+    <title>Welcome to PseudoDiffusers!! &#8212; Text-to-Image Generation-feat-Diffusion</title>
   
   
   
@@ -163,7 +163,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    [PseudoLab] Text-to-Image Generation (feat. Diffusion)
+                    Welcome to PseudoDiffusers!!
                 </a>
             </li>
         </ul>
@@ -236,14 +236,40 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="docs/review/Muse.html">Muse</a></li>
 
 
+<li class="toctree-l1"><a class="reference internal" href="docs/review/GIGAGAN.html">Scaling up GANs for Text-to-Image Synthesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/review/consistency_models.html">Consistency Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/review/latent_consistency_models.html">Latent Consistency Models</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="docs/review/LLM_grounded_Diffusion.html">LLM Grounded Diffusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/review/DiT.html">Abstract</a></li>
+
+
+
+
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Video Generation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="docs/review/Make_A_Video.html">Make A Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docs/review/VideoLDM.html">VideoLDM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/review/AnimateDiff.html">AnimateDiff</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docs/review/Animate_Anyone.html">Animate Anyone</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docs/review/DreaMoving.html">DreaMoving</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/review/DreamPose.html">DreamPose: Fashion Image-to-Video Synthesis via Stable Diffusion</a></li>
+
+
+
+
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">3D Generation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="docs/review/NeRF.html">NeRF : Representing Scenes as Neural Radiance Fields for View Synthesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/review/3DGS.html">3D Gaussian Splatting for Real-Time Radiance Field Rendering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/review/DreamFusion.html"><strong>DreamFusion</strong></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiments</span></p>
 <ul class="nav bd-sidenav">
@@ -419,7 +445,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -430,11 +458,22 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>[PseudoLab] Text-to-Image Generation (feat. Diffusion)</h1>
+    <h1>Welcome to PseudoDiffusers!!</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-us">About Us</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publications">Publications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tech-blog-contents">Tech Blog Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributors">Contributors</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -444,13 +483,56 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="pseudolab-text-to-image-generation-feat-diffusion">
-<h1>[PseudoLab] Text-to-Image Generation (feat. Diffusion)<a class="headerlink" href="#pseudolab-text-to-image-generation-feat-diffusion" title="Permalink to this heading">#</a></h1>
-<p>This is the repository of Pseudo Lab’s Text-to-Image Generation (feat. Diffusion) team.</p>
-<p>:bulb: Our aim is to review papers and code related to image generation and text-to-image generation models, approach them theoretically, and conduct various experiments by fine-tuning diffusion based models.</p>
-<p><a class="reference external" href="https://www.linkedin.com/company/pseudolab/">About Us - Pseudo Lab</a></p>
-<p><a class="reference external" href="https://pseudo-lab.com/Text-to-Image-Generation-feat-Diffusion-cc12047d1bfc4bdfa70122c11ff90aee">About Us - Text-to-Image Generation (feat. Diffusion) Team</a></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-pseudodiffusers">
+<h1>Welcome to PseudoDiffusers!!<a class="headerlink" href="#welcome-to-pseudodiffusers" title="Permalink to this heading">#</a></h1>
+<section id="about-us">
+<h2>About Us<a class="headerlink" href="#about-us" title="Permalink to this heading">#</a></h2>
+<p>This is the repository of PseudoDiffusers team.</p>
+<p>Our aim is to review papers and code related to computer vision generation models, approach them theoretically, and conduct various experiments by fine-tuning diffusion based models.</p>
+<p><a class="reference external" href="https://www.linkedin.com/company/pseudolab/">About Us - PseudoLab</a></p>
+<p><a class="reference external" href="https://chanrankim.notion.site/PseudoDiffusers-b666d39ea1924b4692796e442bebcd44">About Us - PseudoDiffusers</a></p>
 <p>참여 방법: 매주 수요일 오후 9시, 가짜연구소 Discord Room-DH 로 입장!</p>
+</section>
+<section id="publications">
+<h2>Publications<a class="headerlink" href="#publications" title="Permalink to this heading">#</a></h2>
+<p><strong>DiffInject: Revisiting Debias via Synthetic Data Generation using Diffusion-based Style Injection</strong><br />
+Donggeun Ko*, Sangwoo Jo*, Dongjun Lee, Namjun Park, Jaekwang KIM<br />
+CVPR 2024 Workshop<br />
+<a class="reference external" href="https://openreview.net/pdf?id=jSB5wlUU3p">PDF</a></p>
+</section>
+<section id="tech-blog-contents">
+<h2>Tech Blog Contents<a class="headerlink" href="#tech-blog-contents" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Preliminary Works</p></li>
+<li><p>Image Generation</p></li>
+<li><p>Video Generation</p></li>
+<li><p>3D Generation</p></li>
+<li><p>Experiments</p></li>
+</ul>
+</section>
+<section id="contributors">
+<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>조상우 [Sangwoo Jo] | <a class="reference external" href="https://github.com/jasonjo97">Github</a> | <a class="reference external" href="https://www.linkedin.com/in/sangwoojo/">Linkedin</a> |</p></li>
+<li><p>문광수 [Kwangsu Mun] | <a class="reference external" href="https://github.com/mksoo">Github</a> | <a class="reference external" href="https://www.linkedin.com/in/%EA%B4%91%EC%88%98-%EB%AC%B8-95681b229/">Linkedin</a> |</p></li>
+<li><p>김지수 [Jisu Kim] | Github |  <a class="reference external" href="https://www.linkedin.com/in/%EC%A7%80%EC%88%98-%EA%B9%80-5a0b2320a/">Linkedin</a> |</p></li>
+<li><p>박범수 [Beomsoo Park] | <a class="reference external" href="https://github.com/hanlyang0522">Github</a> | Linkedin |</p></li>
+<li><p>지승환 [Seunghwan Ji] | <a class="reference external" href="https://github.com/hwansnaa">Github</a> | <a class="reference external" href="https://www.linkedin.com/in/%EC%8A%B9%ED%99%98-%EC%A7%80-0169b425a/">Linkedin</a> |</p></li>
+<li><p>고동근 [Donggeun Sean Ko] | <a class="reference external" href="https://github.com/seanko29">Github</a> | <a class="reference external" href="https://www.linkedin.com/in/sangwoojo/">Linkedin</a> |</p></li>
+<li><p>조남경 [Namkyeong Cho] | Github | Linkedin |</p></li>
+<li><p>김선훈 [SeonHoon Kim] | <a class="reference external" href="https://github.com/egshkim">Github</a> | <a class="reference external" href="https://www.linkedin.com/in/seonhoonkim/">Linkedin</a> |</p></li>
+<li><p>이준형 [Junhyoung Lee] | <a class="reference external" href="https://github.com/jjuun0">Github</a> | <a class="reference external" href="https://www.linkedin.com/in/jjuun0">Linkedin</a> |</p></li>
+<li><p>조형서 [Hyoungseo Cho] | <a class="reference external" href="https://github.com/ChoHyoungSeo">Github</a> | <a class="reference external" href="https://www.linkedin.com/in/hyoungseo-cho/">Linkedin</a> |</p></li>
+<li><p>유정화 [Jeonghwa Yoo] | <a class="reference external" href="https://github.com/jeongHwarr">Github</a> | <a class="reference external" href="https://www.linkedin.com/in/jeonghwa-yoo-8403a716b/">Linkedin</a> |</p></li>
+<li><p>박세환 [Sehwan Park] | <a class="reference external" href="https://github.com/shp216">Github</a> | Linkedin |</p></li>
+<li><p>송건학 [Geonhak Song] | <a class="reference external" href="https://github.com/geonhak904">Github</a> | Linkedin |</p></li>
+<li><p>한동현 [Donghyun Han] | <a class="reference external" href="https://github.com/donghyun99">GitHub</a> | <a class="reference external" href="https://www.linkedin.com/in/donghyun99/">Linkedin</a> |</p></li>
+<li><p>이창환 [ChangHwan Lee] | <a class="reference external" href="https://github.com/Hwan-I">Github</a> | Linkedin</p></li>
+<li><p>유경민 [Kyeongmin Yu] | <a class="reference external" href="https://github.com/yukyeongmin">Github</a> | Linkdedin |</p></li>
+</ul>
+</section>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -506,6 +588,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-us">About Us</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publications">Publications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tech-blog-contents">Tech Blog Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributors">Contributors</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
